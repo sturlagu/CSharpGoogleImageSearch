@@ -1,0 +1,1 @@
+C:\Users\Sturla\Desktop\for fun\Prosjekt8 - c#NetCore searchPictures\app\obj\Debug\netstandard1.3\app.csprojAssemblyReference.cache

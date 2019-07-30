@@ -1,0 +1,31 @@
+﻿<Window x:Class="app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app"
+        mc:Ignorable="d"
+        Title="Search Pictures" Height="1000" Width="1000" ResizeMode="NoResize" Background="LightYellow" WindowStartupLocation="CenterScreen" MouseDown="UnfocusSearchbar">
+    <Grid Name="grid" Focusable="True">
+        <!-- Defining grid -->
+        <Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*" />
+			<ColumnDefinition Width="1*" />
+			<ColumnDefinition Width="1*" />
+			<ColumnDefinition Width="1*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*" />
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="2*" />
+		</Grid.RowDefinitions>
+        <!-- Content -->
+        <!-- Searchbar -->
+        <Border Grid.Column="0" Grid.ColumnSpan="4" Background="PapayaWhip" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Text="Søk etter bilde" FontSize="23" Foreground="DarkSlateBlue" Margin="300,50,0,0" />
+        </Border>
+        <TextBox Grid.Column="0" Grid.ColumnSpan="4" KeyDown="GetInput" Name="searchBox" Width="300" Height="35" FontSize="23" Margin="230,0,0,0" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"/>
+        <TextBlock Name="noResults" Grid.Column="0" Grid.ColumnSpan="4" Text="Ingen bilder funnet" FontSize="23" Foreground="Gray" Margin="480,90,0,0" Visibility="Collapsed"/>
+    </Grid>
+</Window>
